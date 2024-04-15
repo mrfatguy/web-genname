@@ -4,19 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>asymmetrics.pl</title>
+	<title>Names Generator On-Line</title>
     <meta name="description" content="Description">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://use.fontawesome.com/f28c2cb418.js"></script>
-    
-	<meta property="og:title" content="asymmetrics.pl">
-	<meta property="og:description" content="Description">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://www.asymmetrics.pl/en">
-	<meta property="og:image" content="http://www.asymmetrics.pl/img/fb-logo.jpg">
-	<meta property="og:site_name" content="asymmetrics.pl">
 </head>
 
 <body>
@@ -25,48 +17,44 @@
         <img src="http://res.cloudinary.com/alpis/image/upload/v1505922420/DSCN2640_naambz.jpg" alt="" class="header-bg">
         <div class="header-container container grid">
             <div class="header-logo logo">
-                <a href="#">asymmetrics<span>.pl</span></a>
+                <a href="#">Names Generator <span>On-Line</span></a>                
+                <p>Names generator for games, books and socials... on-line</p>                
             </div>
             
             <div class="header-menu grid">
-                <a href="#" class="closed menu-trigger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
+
                 <nav class="menu grid"> 
-                    <a href="#section-about" class="menu-item active">About</a>
-                    <a href="#section-gallery" class="menu-item">Gallery</a>
-                    <a href="#section-team" class="menu-item">Team</a>
-                    <a href="#section-contact" class="menu-item">Contacts</a>
+                    <span></span>
+                    <span></span>
+                    <a href="#section-about" class="menu-item">About</a>
+                    <a href="#section-game" class="menu-item">Game</a>
                 </nav>
             </div>
             
             <div class="header-wrapper">
             
                 <div class="header-title">
-                
-                    <h1>
-                    
-                        Tomorrow does <span>not exists</span>.<br />
-                        The future <span>is now</span>!
-                    </h1>
                     
                     <p>
-                        We are making <span>today</span> things and processes that for most are still part of <span>the future</span>.<br>
-                        We are doing impossible in <span>one day</span>. For miracles we need <span>some more time</span>.<br>
+                        We are making <span>today</span> things and processes that for most are still part of <span>the future</span>. <br />
+                        We are doing impossible in <span>one day</span>. For miracles we need <span>some more time</span>.
                     </p>
-
+                    
+                    <br /><br />
+                    
+                    <p>
+                        <form action="" class="footer-form grid">
+                            <input type="text" name="name" placeholder="Your Name...">
+                            <input type="email" name="email" placeholder="Email">
+                            <textarea name="message" id="" placeholder="Your Message..."></textarea>
+                            <div class="footer-button"><input type="submit" value="Send" class="button"></div>
+                        </form>
+                    </p>
+                    
                 </div>
                 
-                <div class="header-spacer">
-
-                </div>
+                <div class="header-spacer"></div>
             
-            </div>
-            
-            <div class="header-button">
-                <a href="#section-about" class="button">About</a>
             </div>
             
         </div>
@@ -74,22 +62,18 @@
     <section class="about" id="section-about">
         <div class="about-container container grid">
             <div class="about-img">
-            <img src="https://images.unsplash.com/photo-1425116100155-1ac0797442e1?dpr=1&auto=format&fit=crop&w=1500&h=1375&q=80&cs=tinysrgb&crop=" alt="About">
-        </div>
-        <div class="about-text">
-            <h2>About</h2>
-            <p>We are team of enthusiasts. <br>
-We make photos of nature with love. <br>
-No matter we are in the native city or village, or going abroad. We find interesting things, especially nature.</p>
-            <p>As well, we are open for new people. Just contact us, and we publish the best of your works.</p>
-            <div class="about-button">
-                <a href="#section-gallery" class="button">Gallery</a>
+                <img src="https://images.unsplash.com/photo-1425116100155-1ac0797442e1?dpr=1&auto=format&fit=crop&w=1500&h=1375&q=80&cs=tinysrgb&crop=" alt="About">
             </div>
-        </div>
+            <div class="about-text">
+                <h2>About</h2>
+                <p>This is a web version of my very old Delphi project. I use it to generate names for games, books, poetry, avatars, socials etc. It contains "databases" for generating many different name sets, including fantasty (more and less known) and human names (in many languages or from many culture types).</p>
+                <p>If need some other tool for any other reason (for random names of a human beings rather than some trolls and other fantasty creatures), you may consider <a href="https://www.namespedia.com/random-name-generator.php">Random Name Generator</a> or <a href="http://www.studentsoftheworld.info/penpals/stats.php3">Students of the World</a> website.</p>
+                <p><a href="https://github.com/mrfatguy/web-genname" class="button">github.com → mrfatguy → web-genname</a></p>
+            </div>
         </div>
     </section>
     
-    <section class="gallery grid" id="section-gallery">
+    <section class="gallery grid" id="section-game">
         <h2 class="gallery-title">Gallery</h2>
         <div class="gallery-grid grid container">
             
@@ -166,66 +150,15 @@ No matter we are in the native city or village, or going abroad. We find interes
                 </div>
                 
         </div>
-        
-        <div class="gallery-button">
-            <a href="#section-team" class="button">Team</a>
-        </div>
      
     </section>
     
-    <section class="ourteam" id="section-team">
-        <div class="ourteam-title">
-            <h2>Team</h2>
-        </div>
-        <div class="ourteam-grid container grid">
-            <div class="ourteam-item">
-                <div class="ourteam-img"><img src="https://images.unsplash.com/7/sunset-hair.jpg?dpr=1&auto=format&fit=crop&w=1500&h=997&q=80&cs=tinysrgb&crop=" alt=""></div>
-                <div class="ourteam-name"><h3>Elena</h3></div>
-                <div class="ourteam-desctiption"><p>Elena is another word for perfect. <br>
-The root of the word comes from ancient fairy world, where perfect beings were called ELENA not many of them survived throught time but some are still among us.</p></div>
-                <div class="ourteam-socials">
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="ourteam-item">
-                <div class="ourteam-img"><img src="https://images.unsplash.com/photo-1455636820250-908db9925403?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" alt=""></div>
-                <div class="ourteam-name"><h3>Nadezhda</h3></div>
-                <div class="ourteam-desctiption"><p>Nadezhda is a Russian name which means 'hope', usually changed to Nadia or Nadiya when used in an English-speaking country.<br>
-They are usually tall and beautiful, with a gymnastic history. </p></div>
-                <div class="ourteam-socials">
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="ourteam-item">
-                <div class="ourteam-img"><img src="https://images.unsplash.com/photo-1471201250825-21ccf7920d98?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" alt=""></div>
-                <div class="ourteam-name"><h3>Ekaterina</h3></div>
-                <div class="ourteam-desctiption"><p>A girl who is beautiful and intelligent and hilarious to be around. The bestest friend anyone could ever ask for. <br>She is also a girl who is great in bed and knows how to get to someone's heart quickly.</p></div>
-                <div class="ourteam-socials">
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-        
-            <div class="header-button">
-                <a href="#section-contact" class="button">Contact</a>
-            </div>
-            
-            <div><p>&nbsp;</p></div>
-            
-    </section>
-    
-    <footer class="footer" id="section-contact">
+    <footer class="footer">
      <div class="footer-container grid container">
          <div class="footer-left grid">
          
             <div class="footer-logo logo">
-                <a href="#">asymmetrics<span>.pl</span></a>
+                <a href="#">mrfatguy.github.io<span>/web-genname/</span></a>
             </div>
             
             <div class="footer-description">
@@ -237,6 +170,9 @@ They are usually tall and beautiful, with a gymnastic history. </p></div>
             </div>
             
             <div class="footer-socials">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
