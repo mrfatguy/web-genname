@@ -270,7 +270,15 @@ a.active:hover::before {
 
 .gallery-title {
     padding: 0 10px;
-    margin: 50px 0;
+    margin: 50px 0 20px 0;
+}
+
+.gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .gallery-grid {
@@ -282,7 +290,6 @@ a.active:hover::before {
 
 .gallery-item {
     position: relative;
-    cursor: pointer;
 }
 
 .gallery-item img {
@@ -324,17 +331,28 @@ a.active:hover::before {
     position: absolute;
     bottom: -1px;
     width: 100%;
-    height: 45px;
+    height: 64px;
     background: rgba(44, 107, 49, 0.7);
     opacity: 0;
     transition: all 0.5s ease-in-out;
 }
 
+.gallery-item-description a {
+    text-decoration: none;
+}
+    
 .gallery-item-description h4 {
+    padding-left: 7px;
+    padding-top: 3px;
+    text-align: left;
     color: #FFED4A;
 }
 
 .gallery-item-description p {
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-top: 3px;
+    text-align: left;
     font-size: 14px;
     color: white;
 }
@@ -431,7 +449,7 @@ footer {
 }
 
 .footer-socials {
-    padding: 50px 20px 70px 0px;
+    padding: 10px 0px 10px 0px;
 }
 
 .footer-socials a {
