@@ -184,7 +184,7 @@ a.active:hover::before {
 
 .header-title {
     background-color: black;
-    padding: 10px 30px 70px 30px;
+    padding: 20px 30px 10px 30px;
     opacity: 50%;
 }
 
@@ -195,7 +195,12 @@ a.active:hover::before {
 .header-title p {
     color: #E6F3E3;
     font-size: 28px;
+    text-align: left;
     line-height: 37px;
+}
+
+.header-title p.sublevel {
+    font-size: 21px;
 }
 
 .header-title h1 {
@@ -464,7 +469,7 @@ footer {
 }
 
 .footer-form {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     text-align: center;
 }
@@ -472,11 +477,10 @@ footer {
 .footer-form textarea,
 .footer-form .footer-button {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 4;
 }
 
-.footer-form input[type="text"],
-.footer-form input[type="email"],
+.footer-form select,
 .footer-form textarea {
     background: rgba(178, 207, 178, 0.7);
     padding: 15px;
@@ -486,22 +490,20 @@ footer {
     transition: outline 0.5s ease;
 }
 
-.footer-form input[type="text"]::placeholder,
-.footer-form input[type="email"]::placeholder,
+.footer-form select::placeholder,
 .footer-form textarea::placeholder {
     color: rgba(255, 255, 255, 0.8);
     font-family: 'Open Sans', sans-serif;
 }
 
-.footer-form input[type="text"]:focus,
-.footer-form input[type="email"]:focus,
+.footer-form select:focus,
 .footer-form textarea:focus {
     outline: solid 3px #FFED4A;
 }
 
 .footer-form textarea {
     grid-row-start: 2;
-    grid-row-end: 8;
+    grid-row-end: 18;
 }
 
 .footer-form input[type="submit"]:focus {
@@ -528,6 +530,10 @@ footer {
     
     .header-title p {
         font-size: 24px;
+    }
+    
+    .header-title p.sublevel {
+        font-size: 20px;
     }
 
     h2 {
@@ -619,8 +625,8 @@ footer {
         grid-column-end: 2;
     }
     .footer-form textarea {
-        grid-row-start: 3;
-        grid-row-end: 8;
+        grid-row-start: 4;
+        grid-row-end: 12;
     }
 }
 
@@ -701,6 +707,9 @@ footer {
     }
     .header-title p {
         font-size: 21px;
+    }
+    .header-title p.sublevel {
+        font-size: 17px;
     }
     .logo {
         font-size: 22px;

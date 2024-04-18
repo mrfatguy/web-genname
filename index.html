@@ -13,8 +13,11 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/code.js"></script>
     
-    <script src="js/data/human-polish-female.js"></script>
-    <script src="js/data-map.js"></script>
+    <script src="data/human-english-female.djs"></script>
+    <script src="data/human-polish-female.djs"></script>
+    <script src="data/array-mapper.djs"></script>
+    <script src="js/generator.js"></script>
+    
 </head>
 
 <body>
@@ -42,20 +45,22 @@
                 <div class="header-title">
                     
                     <p>
-                        We are making <span>today</span> things and processes that for most are still part of <span>the future</span>. <br />
-                        We are doing impossible in <span>one day</span>. For miracles we need <span>some more time</span>.
+                        <form action="" class="footer-form grid">
+                            <select title="Group" id="group-select" onchange="updateSubgroup()"></select>
+                            <select title="Subgroup" id="subgroup-select" onchange="updateType()"></select>
+                            <select title="Type" id="type-select" onchange="generateNames()"></select>
+                            
+                            <textarea name="List" id="list-textarea" placeholder="Please, wait..."></textarea>
+                            
+                            <div class="footer-button"><input type="submit" value="Generate" class="button"></div>
+                        </form>
                     </p>
                     
                     <br /><br />
                     
-                    <p>
-                        <form action="" class="footer-form grid">
-                            <input type="text" name="name" placeholder="Your Name...">
-                            <input type="email" name="email" placeholder="Email">
-                            <textarea name="message" id="" placeholder="Your Message..."></textarea>
-                            <div class="footer-button"><input type="submit" value="Send" class="button"></div>
-                        </form>
-                    </p>
+                    <p><span>Type:</span> fantasy_add_female.</p>
+                    
+                    <p class="sublevel"><span>Type:</span> fantasy_add_female.</p>
                     
                 </div>
                 
