@@ -2,7 +2,6 @@ window.onload = function() {
     populateDropdown('group-select', groupOptions);
     
     updateSubgroup();
-    updateType();
 };
 
 function populateDropdown(dropdownId, options) {
@@ -42,6 +41,11 @@ function generateNames() {
     let code = groupValue + '_' + subgroupValue + '_' + typeValue;
     code = code.split(' ').join('').split('&').join('').toLowerCase();
     
-    list.innerHTML = (objectMap[code] === null) ? 'This databank does not exist!' : 'Generating names. Please, wait...';
-    // console.log(objectMap[code]);
+    if (objectMap[code] && objectMap[code].groups && Array.isArray(objectMap[code].groups)) {
+        list.innerHTML = 'Generating names. Please, wait...';
+        
+        console.log(objectMap[code].groups.length);
+    }
+    else list.innerHTML =  'This databank does not exist!';
+    
 }
