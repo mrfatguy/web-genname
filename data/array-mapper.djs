@@ -152,7 +152,7 @@ const objectMap = {
     human_netherlandish_female: null,
     human_netherlandish_male: null,
     human_polish_female: human_polish_female,
-    human_polish_male: null,
+    human_polish_male: human_polish_male,
     human_scandinavian_female: null,
     human_scandinavian_male: null,
     human_ukrainian_female: null,
