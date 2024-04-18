@@ -119,7 +119,7 @@ const objectMap = {
     fantasy_sparhawk_all: null,
     fantasy_trolls_female: null,
     fantasy_trolls_male: null,
-    human_african_female: null,
+    human_african_female: human_african_female,
     human_african_male: null,
     human_arabic_female: null,
     human_arabic_male: null,
