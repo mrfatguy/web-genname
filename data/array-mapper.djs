@@ -120,7 +120,7 @@ const objectMap = {
     fantasy_trolls_female: null,
     fantasy_trolls_male: null,
     human_african_female: human_african_female,
-    human_african_male: null,
+    human_african_male: human_african_male,
     human_arabic_female: null,
     human_arabic_male: null,
     human_balkan_female: null,

@@ -41,11 +41,11 @@ function generateNames() {
     let code = groupValue + '_' + subgroupValue + '_' + typeValue;
     code = code.split(' ').join('').split('&').join('').toLowerCase();
     
-    if (objectMap[code] && objectMap[code].groups && Array.isArray(objectMap[code].groups)) {
+    if (objectMap[code] && objectMap[code].groups && Array.isArray(objectMap[code].groups) && objectMap[code].groups.length >= 1) {
         list.innerHTML = 'Generating names. Please, wait...';
         
         console.log(objectMap[code].groups.length);
     }
-    else list.innerHTML =  'This databank does not exist!';
+    else list.innerHTML =  'This databank does not exist or is corrupted!';
     
 }
