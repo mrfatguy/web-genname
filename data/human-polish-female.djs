@@ -1,14 +1,16 @@
 let human_polish_female = {
-    names: [
-        'Ada',
-        'Adela',
-        'Adolfina',
-        'Adrianna'
-    ],
-    surnames: [
-        'Abramowicz',
-        'Adamczak',
-        'Adamczewska',
-        'Adamczyk'
+    groups: [
+        [
+            'Ada',
+            'Adela',
+            'Adolfina',
+            'Adrianna'
+        ],
+        [
+            'Abramowicz',
+            'Adamczak',
+            'Adamczewska',
+            'Adamczyk'
+        ]
     ]
 };

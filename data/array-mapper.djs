@@ -132,7 +132,7 @@ const objectMap = {
     human_czechandslovak_female: null,
     human_czechandslovak_male: null,
     human_english_female: human_english_female,
-    human_english_male: null,
+    human_english_male: human_english_male,
     human_fareastwithoutchina_female: null,
     human_fareastwithoutchina_male: null,
     human_french_female: null,
