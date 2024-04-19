@@ -53,11 +53,14 @@
                         <form action="" class="footer-form grid">
                             <select title="Group" id="group-select" onchange="updateSubgroup()"></select>
                             <select title="Subgroup" id="subgroup-select" onchange="updateType()"></select>
-                            <select title="Type" id="type-select" onchange="generateNames()"></select>
+                            <select title="Type" id="type-select" onchange="generateNames(true)"></select>
                             
-                            <textarea name="List" id="list-textarea" placeholder="Please, wait..."></textarea>
+                            <textarea name="List 1" id="list-textarea-1" placeholder="Please, wait..."></textarea>
+                            <textarea name="List 2" id="list-textarea-2" placeholder="Please, wait..."></textarea>
+                            <textarea name="List 3" id="list-textarea-3" placeholder="Please, wait..."></textarea>
+                            <textarea name="List 4" id="list-textarea-4" placeholder="Please, wait..."></textarea>
                             
-                            <div class="footer-button"><input type="submit" value="Generate" class="button"></div>
+                            <div class="footer-button"><input value="Generate" class="button" onclick="generateNames(true)"></div>
                         </form>
                     </p>
                     
