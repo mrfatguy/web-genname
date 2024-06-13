@@ -253,6 +253,9 @@ let human_polish_female = {
             'Żaneta'
         ],
         [
+            ' '
+        ],
+        [
             'Abramowicz',
             'Adamczak',
             'Adamczewska',

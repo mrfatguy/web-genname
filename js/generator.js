@@ -84,17 +84,31 @@ function getDatabank() {
     return objectMap[code];    
 }
 
+function getRandomElement(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function generateString(arrayOfArrays) {
+    let result = '';
+
+    for(let i = 0; i < arrayOfArrays.length; i++) {
+        result += getRandomElement(arrayOfArrays[i]);
+    }
+
+    return result;
+}
+
 function generateNames(force = false) {
     if (window.namesArray && !force) return window.namesArray;
 
-    let db = getDatabank();
+    let
+        result = [],
+        db = getDatabank();
 
     if (db && db.groups && Array.isArray(db.groups) && db.groups.length >= 1) {
-        let
-            max = getRandomInt(80, db.groups[0].length),
-            min = max - 80;
+        for(let j = 0; j < 80; j++) result.push(generateString(db.groups));
 
-        window.namesArray = db.groups[0].slice(min, max);
+        window.namesArray = result;
         updateTextareas(window.namesArray);
     }
     else updateTextareas('Error reading databank!');
@@ -103,7 +117,6 @@ function generateNames(force = false) {
 
     if (db && typeof db.meta === 'object' && db.meta !== null) {
         for (let key in db.meta) {
-            console.log(key);
             if (db.meta.hasOwnProperty(key)) {
                 let element = document.getElementById(`meta-${key}`);
                 if (element) {

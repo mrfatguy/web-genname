@@ -496,12 +496,13 @@ footer {
 
 .footer-form select,
 .footer-form textarea {
-    background: rgba(178, 207, 178, 0.7);
-    padding: 15px;
     color: #fff;
     border: none;
-    outline: solid 3px rgba(178, 207, 178, 0.7);
+    padding: 11px;
+    font-size: 18px;
     transition: outline 0.5s ease;
+    background: rgba(178, 207, 178, 0.7);
+    outline: solid 3px rgba(178, 207, 178, 0.7);
 }
 
 .footer-form select::placeholder,

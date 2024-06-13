@@ -96,6 +96,8 @@ const objectMap = {
     human_african_male: human_african_male,
     human_english_female: human_english_female,
     human_english_male: human_english_male,
+    human_german_female: human_german_female,
+    human_german_male: human_german_male,
     human_polish_female: human_polish_female,
     human_polish_male: human_polish_male
 }

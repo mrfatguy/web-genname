@@ -228,6 +228,9 @@ let human_polish_male = {
             'Zygmunt'
         ],
         [
+            ' '
+        ],
+        [
             'Abramowicz',
             'Adamczak',
             'Adamczewski',
