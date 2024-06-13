@@ -1,12 +1,13 @@
 let human_african_female = {
     meta: {
         'title': 'African Female Names',
-        'description': 'African female names. Probably Nigerian in most cases',
+        'description': 'African female names. Probably Nigerian in most cases.',
         'version': '1.00',
         'author': 'Mr. Fat Guy',
         'updated': '13th May 2005',
         'created': '2nd February 2001'
     },
+    
     groups: [
         [
             'Abebi',

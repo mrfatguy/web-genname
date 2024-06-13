@@ -1,4 +1,13 @@
 let human_english_female = {
+    meta: {
+        'title': 'English Female Names',
+        'description': 'English female names. Diminutive or alternative pronunciation versions are given in braces.',
+        'version': '1.00',
+        'author': 'Mr. Fat Guy',
+        'updated': '13th May 2005',
+        'created': '31st January 2001'
+    },
+    
     groups: [
         [
             'Abigale',
