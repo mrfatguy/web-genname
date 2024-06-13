@@ -64,6 +64,14 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function cleanMetaFields() {
+    let elements = document.querySelectorAll('[id^="meta-"]');
+
+    elements.forEach(element => {
+        element.textContent = '(no data)';
+    });
+}
+
 function getDatabank() {
     let
         typeValue = document.getElementById('type-select').value,
@@ -90,5 +98,18 @@ function generateNames(force = false) {
         updateTextareas(window.namesArray);
     }
     else updateTextareas('Error reading databank!');
-    
+
+    cleanMetaFields();
+
+    if (db && typeof db.meta === 'object' && db.meta !== null) {
+        for (let key in db.meta) {
+            console.log(key);
+            if (db.meta.hasOwnProperty(key)) {
+                let element = document.getElementById(`meta-${key}`);
+                if (element) {
+                    element.textContent = db.meta[key];
+                }
+            }
+        }
+    }
 }

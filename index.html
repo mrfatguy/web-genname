@@ -49,26 +49,31 @@
             
                 <div class="header-title">
                     
-                    <p>
-                        <form action="" class="footer-form grid">
-                            <select title="Group" id="group-select" onchange="updateSubgroup()"></select>
-                            <select title="Subgroup" id="subgroup-select" onchange="updateType()"></select>
-                            <select title="Type" id="type-select" onchange="generateNames(true)"></select>
-                            
-                            <textarea name="List 1" id="list-textarea-1" placeholder="Please, wait..."></textarea>
-                            <textarea name="List 2" id="list-textarea-2" placeholder="Please, wait..."></textarea>
-                            <textarea name="List 3" id="list-textarea-3" placeholder="Please, wait..."></textarea>
-                            <textarea name="List 4" id="list-textarea-4" placeholder="Please, wait..."></textarea>
-                            
-                            <div class="footer-button"><input value="Generate" class="button" onclick="generateNames(true)"></div>
-                        </form>
-                    </p>
-                    
+                    <form action="" class="footer-form grid">
+                        <select title="Group" id="group-select" onchange="updateSubgroup()"></select>
+                        <select title="Subgroup" id="subgroup-select" onchange="updateType()"></select>
+                        <select title="Type" id="type-select" onchange="generateNames(true)"></select>
+
+                        <textarea name="List 1" id="list-textarea-1" placeholder="Please, wait..."></textarea>
+                        <textarea name="List 2" id="list-textarea-2" placeholder="Please, wait..."></textarea>
+                        <textarea name="List 3" id="list-textarea-3" placeholder="Please, wait..."></textarea>
+                        <textarea name="List 4" id="list-textarea-4" placeholder="Please, wait..."></textarea>
+
+                        <div class="footer-button"><input value="Generate" class="button" onclick="generateNames(true)"></div>
+                    </form>
+
                     <br /><br />
                     
-                    <p><span>Type:</span> fantasy_add_female.</p>
+                    <p class="first-level"><span class="value" id="meta-title">##TITLE##</span></p>
                     
-                    <p class="sublevel"><span>Type:</span> fantasy_add_female.</p>
+                    <p class="second-level"><span id="meta-description"></span></p>
+
+                    <p class="third-level">
+                        Author: <span class="value" id="meta-author"></span>.
+                        Version: <span class="value" id="meta-version"></span>.
+                        Updated: <span class="value" id="meta-updated"></span>.
+                        Created: <span class="value" id="meta-created"></span>.
+                    </p>
                     
                 </div>
                 

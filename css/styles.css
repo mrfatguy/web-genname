@@ -80,7 +80,7 @@ h2 {
 
 .logo {
     font-size: 32px;
-    font-weight: light;
+    font-weight: lighter;
 }
 
 .logo a {
@@ -144,9 +144,9 @@ h2 {
 .menu a::before {
     content: '';
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
-    width: 0px;
+    width: 0;
     height: 100%;
     border-bottom: solid 2px #fff;
     transition: all 0.5s ease;
@@ -166,7 +166,7 @@ a.active::before,
 a.active:hover::before {
     content: '';
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -188,18 +188,23 @@ a.active:hover::before {
     opacity: 50%;
 }
 
-.header-title span {
+.header-title span.value {
     color: #FFED4A;
 }
 
 .header-title p {
     color: #E6F3E3;
-    font-size: 28px;
+    font-size: 35px;
     text-align: left;
     line-height: 37px;
+    font-weight: bold;
 }
 
-.header-title p.sublevel {
+.header-title p.second-level {
+    font-size: 24px;
+}
+
+.header-title p.third-level {
     font-size: 21px;
 }
 
@@ -454,7 +459,7 @@ footer {
 }
 
 .footer-socials {
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0 10px 0;
 }
 
 .footer-socials a {
@@ -536,8 +541,12 @@ footer {
         font-size: 24px;
     }
     
-    .header-title p.sublevel {
+    .header-title p.second-level {
         font-size: 20px;
+    }
+
+    .header-title p.third-level {
+        font-size: 17px;
     }
 
     h2 {
@@ -714,22 +723,32 @@ footer {
     h1 {
         font-size: 35px;
     }
+
     .header-title p {
         font-size: 21px;
     }
-    .header-title p.sublevel {
+
+    .header-title p.second-level {
         font-size: 17px;
     }
+
+    .header-title p.third-level {
+        font-size: 14px;
+    }
+
     .logo {
         font-size: 22px;
     }
+
     .logo a span {
         font-size: 24px;
     }
+
     .gallery-grid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(9, 200px);
     }
+
     .gallery-item:nth-child(5) {
         grid-column-start: auto;
         grid-column-end: auto;
