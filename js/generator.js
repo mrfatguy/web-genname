@@ -1,10 +1,13 @@
-window.onload = function() {
-    populateDropdown('group-select', groupOptions);
-    
-    updateSubgroup();
-};
-
+window.onload = function() {handleLoad()};
 window.onresize = function() {updateTextareas(generateNames())};
+
+function handleLoad() {
+    populateDropdown('group-select', groupOptions);
+
+    document.getElementById('group-select').value = (localStorage.getItem('group') !== null) ? localStorage.getItem('group') : document.getElementById('group-select').options[0].value;
+
+    updateSubgroup(true);
+}
 
 function populateDropdown(dropdownId, options) {
     const dropdown = document.getElementById(dropdownId);
@@ -19,17 +22,34 @@ function populateDropdown(dropdownId, options) {
     });
 }
 
-function updateSubgroup() {
-    const groupValue = document.getElementById('group-select').value;
-    
+function updateSubgroup(init = false) {
+    let groupValue = document.getElementById('group-select').value;
+
+    localStorage.setItem('group', groupValue);
+
     populateDropdown('subgroup-select', subgroupOptions[groupValue]);
-    updateType();
+
+    if (init) {
+        let subgroupValue = localStorage.getItem('subgroup');
+
+        document.getElementById('subgroup-select').value = (subgroupValue !== null && subgroupValue !== '') ? subgroupValue : document.getElementById('subgroup-select').options[0].value;
+    }
+
+    updateType(init);
 }
 
-function updateType() {
-    const subgroupValue = document.getElementById('subgroup-select').value;
-    
+function updateType(init = false) {
+    let subgroupValue = document.getElementById('subgroup-select').value;
+    localStorage.setItem('subgroup', subgroupValue);
+
     populateDropdown('type-select', typeOptions[subgroupValue] || []);
+
+    if (init) {
+        let typeValue = localStorage.getItem('type');
+
+        document.getElementById('type-select').value = (typeValue !== null && typeValue !== '') ? typeValue : document.getElementById('type-select').options[0].value;
+    }
+
     generateNames(true);
 }
 
@@ -104,6 +124,8 @@ function generateNames(force = false) {
     let
         result = [],
         db = getDatabank();
+
+    localStorage.setItem('type', document.getElementById('type-select').value);
 
     if (db && db.groups && Array.isArray(db.groups) && db.groups.length >= 1) {
         for(let j = 0; j < 80; j++) result.push(generateString(db.groups));
