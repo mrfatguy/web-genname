@@ -23,7 +23,7 @@ const subgroupOptions = {
         'Hungarian',
         'Iberoamerican',
         'Italian',
-        'Netherlandish',
+        'Dutch',
         'Polish',
         'Ukrainian',
         'Scandinavian',

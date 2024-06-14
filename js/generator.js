@@ -1,5 +1,5 @@
 window.onload = function() {handleLoad()};
-window.onresize = function() {updateTextareas(generateNames())};
+window.onresize = function() {updateLists(generateNames())};
 
 function handleLoad() {
     populateDropdown('group-select', groupOptions);
@@ -53,18 +53,18 @@ function updateType(init = false) {
     generateNames(true);
 }
 
-function updateTextareas(value) {
-    const textareas = $('textarea:visible');
+function updateLists(value) {
+    const lists = $('textarea:visible');
     
     if (typeof value === 'string') {
-        for (let i = 0; i < textareas.length; i++) {
-            textareas[i].value = value;
+        for (let i = 0; i < lists.length; i++) {
+            lists[i].value = value;
         }
     }
     
     if (Array.isArray(value)) {
         let
-            groupCount = textareas.length,
+            groupCount = lists.length,
             groupSize = Math.ceil(value.length / groupCount);
         
         for (let i = 0; i < groupCount; i++) {
@@ -72,7 +72,7 @@ function updateTextareas(value) {
                 startIndex = i * groupSize,
                 endIndex = (i + 1) * groupSize
                 
-            textareas[i].value = value.slice(startIndex, endIndex).join('\n');
+            lists[i].value = value.slice(startIndex, endIndex).join('\n');
         }
     }
 }
@@ -131,9 +131,9 @@ function generateNames(force = false) {
         for(let j = 0; j < 80; j++) result.push(generateString(db.groups));
 
         window.namesArray = result;
-        updateTextareas(window.namesArray);
+        updateLists(window.namesArray);
     }
-    else updateTextareas('Error reading databank!');
+    else updateLists('Error reading databank!');
 
     cleanMetaFields();
 

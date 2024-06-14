@@ -1,7 +1,7 @@
 let other_constellations_all = {
     meta: {
-        'title': 'Stars and Constellations',
-        'description': 'Mostly Latin names of stars, star system and constellations. More like test of a new web engine rather than an actual databank',
+        'title': 'Stars, star system and constellations',
+        'description': 'More like test of a new web engine rather than an actual databank',
         'version': '1.00',
         'author': 'Mr. Fat Guy',
         'updated': '19th April 2024',
