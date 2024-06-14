@@ -2,7 +2,7 @@ window.onload = function() {handleLoad()};
 window.onresize = function() {updateLists(generateNames())};
 
 function handleLoad() {
-    populateDropdown('group-select', groupOptions);
+    populateDropdown('group-select', Object.keys(groups));
 
     document.getElementById('group-select').value = (localStorage.getItem('group') !== null) ? localStorage.getItem('group') : document.getElementById('group-select').options[0].value;
 
@@ -27,7 +27,7 @@ function updateSubgroup(init = false) {
 
     localStorage.setItem('group', groupValue);
 
-    populateDropdown('subgroup-select', subgroupOptions[groupValue]);
+    populateDropdown('subgroup-select', Object.keys(groups[groupValue]));
 
     if (init) {
         let subgroupValue = localStorage.getItem('subgroup');
@@ -39,10 +39,13 @@ function updateSubgroup(init = false) {
 }
 
 function updateType(init = false) {
-    let subgroupValue = document.getElementById('subgroup-select').value;
+    let
+        groupValue = document.getElementById('group-select').value,
+        subgroupValue = document.getElementById('subgroup-select').value;
+
     localStorage.setItem('subgroup', subgroupValue);
 
-    populateDropdown('type-select', typeOptions[subgroupValue] || []);
+    populateDropdown('type-select', Object.keys(groups[groupValue][subgroupValue]) || []);
 
     if (init) {
         let typeValue = localStorage.getItem('type');
@@ -96,12 +99,9 @@ function getDatabank() {
     let
         typeValue = document.getElementById('type-select').value,
         groupValue = document.getElementById('group-select').value,
-        subgroupValue = document.getElementById('subgroup-select').value,        
-        code = groupValue + '_' + subgroupValue + '_' + typeValue;
+        subgroupValue = document.getElementById('subgroup-select').value;
 
-    code = code.split(' ').join('').split('&').join('').toLowerCase();
-
-    return objectMap[code];    
+    return groups[groupValue][subgroupValue][typeValue];
 }
 
 function getRandomElement(arr) {
