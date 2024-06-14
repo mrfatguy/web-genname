@@ -2,7 +2,8 @@
 
 const groupOptions = [
     'Human',
-    'Fantasy'
+    'Fantasy',
+    'Other'
 ];
 
 const subgroupOptions = {
@@ -44,6 +45,9 @@ const subgroupOptions = {
         'Sparhawk',
         'Trolls'
     ],
+    'Other': [
+        'Constellations'
+    ]
 };
 
 const typeOptions = {
@@ -81,6 +85,7 @@ const typeOptions = {
     'Kyree': ['All'],
     'Orcs': ['AD&D', 'Tolkien', 'Warhammer'],
     'Sparhawk': ['All'],
+    'Constellations': ['All'],
     'Trolls': ['Female', 'Male']
 };
 
@@ -99,5 +104,6 @@ const objectMap = {
     human_german_female: human_german_female,
     human_german_male: human_german_male,
     human_polish_female: human_polish_female,
-    human_polish_male: human_polish_male
+    human_polish_male: human_polish_male,
+    other_constellations_all: other_constellations_all
 }
