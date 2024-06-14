@@ -31,7 +31,7 @@
 <body>
     
     <header class="header"> 
-        <img src="http://res.cloudinary.com/alpis/image/upload/v1505922420/DSCN2640_naambz.jpg" alt="" class="header-bg">
+        <img src="https://res.cloudinary.com/alpis/image/upload/v1505922420/DSCN2640_naambz.jpg" alt="" class="header-bg">
         <div class="header-container container grid">
             <div class="header-logo logo">
                 <a href="#">Names Generator <span>On-Line</span></a>                
@@ -57,12 +57,17 @@
                         <select title="Subgroup" id="subgroup-select" onchange="updateType()"></select>
                         <select title="Type" id="type-select" onchange="generateNames(true)"></select>
 
+                        <label for="list-textarea-1"></label>
+                        <label for="list-textarea-2"></label>
+                        <label for="list-textarea-3"></label>
+                        <label for="list-textarea-4"></label>
+
                         <textarea name="List 1" id="list-textarea-1" placeholder="Please, wait..."></textarea>
                         <textarea name="List 2" id="list-textarea-2" placeholder="Please, wait..."></textarea>
                         <textarea name="List 3" id="list-textarea-3" placeholder="Please, wait..."></textarea>
                         <textarea name="List 4" id="list-textarea-4" placeholder="Please, wait..."></textarea>
 
-                        <div class="footer-button"><input value="Generate" class="button" onclick="generateNames(true)"></div>
+                        <div class="footer-button"><button type="button" class="button" onclick="generateNames(true)">Generate</button></div>
                     </form>
 
                     <br /><br />
@@ -93,15 +98,15 @@
             </div>
             <div class="about-text">
                 <h2>About</h2>
-                <p>This is a web version of my very old Delphi project. I use it to generate names for games, books, poetry, avatars, socials etc. It contains "databases" for generating many different name sets, including fantasty (more and less known) and human names (in many languages or from many culture types).</p>
-                <p>If need some other tool for any other reason (for random names of a human beings rather than some trolls and other fantasty creatures), you may consider <a href="https://www.namespedia.com/random-name-generator.php">Random Name Generator</a> or <a href="http://www.studentsoftheworld.info/penpals/stats.php3">Students of the World</a> website.</p>
-                <p><a href="https://github.com/mrfatguy/web-genname" class="button">github.com → mrfatguy → web-genname</a></p>
+                <p>This is a web version of my very old Delphi project. I use it to generate names for games, books, poetry, avatars, socials etc. It contains "databases" for generating many different name sets, including fantasy (more and less known) and human names (in many languages or from many culture types).</p>
+                <p>If need some other tool for any other reason (for random names of a human beings rather than some trolls and other fantasy creatures), you may consider <a href="https://www.namespedia.com/random-name-generator.php">Random Name Generator</a> or <a href="https://studentsoftheworld.info/penpals/stats.php">Students of the World</a> website.</p>
+                <p><a href="https://github.com/mrfatguy/web-genname" class="button">github.com</a></p>
             </div>
         </div>
     </section>
     
     <section class="gallery grid" id="section-game">
-        <h2 class="gallery-title">Our Belowed Game</h2>
+        <h2 class="gallery-title">Our Beloved Game</h2>
         
         <div class="gallery-container grid container">
             <p>In 1989 Magnetic Images created “Lost Dutchman Mine”. One of the first survival games in the history of computers. We fell in love with it immediately! And this feeling has lasted...<br><strong>for two generations and over thirty years</strong>!</p>
